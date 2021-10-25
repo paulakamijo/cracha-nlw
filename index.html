@@ -1,4 +1,23 @@
 <!DOCTYPE html>
+ <!--
+Cascading Style Sheet - ordem de aparição dos estilos, que pode ser sobrescrito de acordo com os elementos que aparecem por ÚLTIMO*/
+      
+    /**Especificidade
+
+    - ORDEM DECRESCENTE (Cascading)
+    <> inline CSS > # ID Selector > Class > Element selector {}
+    Estilos inline são os que têm mais força
+
+    a.button {background-color: lightblue;}    elemento (a) + classe (.button)
+    .button {background-color: lightblue;}   classe
+    Apesar da cascata, o a.button é mais forte, pois junta elemento + classe
+    
+    - de ELEMENTO:
+    h1{font-size: 1,5rem;}
+**********************************************
+    UNIDADES DE MEDIDA E RESPONSIVO - Unidades relativas: porcentagem -
+    Unidades estáticas: pixels são fixos
+    -->
 
 <html>
   <head>
@@ -29,7 +48,7 @@
         </div>
 
         <h1 id="userName">Paula Kamijo</h1>
-        <a id="userLink" href="https://github.com/paulakamijo" target="_blank">
+        <a id="userLink" href="https://github.com/paulakamijo2" target="_blank">
           <img src="images/github.svg" alt="ícone github" />
           <span id="userLogin">paulakamijo2</span></a
         >
@@ -40,10 +59,7 @@
 
         <ul id="socialLinks">
           <li class="youtube">
-            <a
-              href="https://www.youtube.com/channel/UCD7KYFgwcMu5IZZC2dZiHBQ"
-              target="_blank"
-            >
+            <a href="https://www.youtube.com/channel/UCD7KYFgwcMu5IZZC2dZiHBQ" target="_blank">
               <img src="images/youtube.svg" alt="ícone youtube" />
             </a>
           </li>
@@ -69,3 +85,11 @@
     <script src="main.js"></script>
   </body>
 </html>
+<!--
+  API 
+Appication Programming Interface
+https://api.github.com/emojis
+https://api.github.com/users/paulakamijo
+JSON leva as informações (garçom)
+
+  -->
