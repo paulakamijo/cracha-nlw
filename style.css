@@ -1,0 +1,107 @@
+/**SELETOR UNIVERSAL
+Vai aplicar o comportamento a todos os elementos
+*/
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  --grey: hsl(240, 9%, 89%, 1);
+  --black: hsl(240, 6%, 13%, 1);
+  /**H é a cor HUE barrinha de cores, S, saturation e L Lightning*/
+
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  display: grid;
+  place-items: center;
+}
+
+main {
+  background: url(images/background.svg);
+  width: 375px;
+  height: 812px;
+}
+/**
+BOX MODEL
+(Content) Define a altura e largura do conteúdo
+(Padding) Define o preenchimento interno entre o conteúdo e a borda da caixa
+(Border) é o limite de borda da caixa
+(Margin) Espaçamento fora da caixa
+
+*/
+.container {
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+  color: var(--grey);
+}
+
+.avatar {
+  width: 10rem;
+  /**rem é medida relativa em relação ao pixel da página, no caso, 1 rem são 16px - 160px de largura = 160/16px = 10rem*/
+  margin: 11.5rem auto 0;
+  position: relative; /**limita em relação à figura*/
+
+  /**
+  0top 0right 0bottom 0left
+  0 0 0 top, as laterais e bottom
+  0  top e bottom  0 laterais (exemplo: 10rem 0; significa 10rem em top e bottom e 0 nas laterais)
+
+  */
+}
+
+.avatar span {
+  position: absolute;
+  top: -15px;
+  z-index: 1; /**eixo de profundidade*/
+}
+/**cria níveis de empilhamento*/
+
+.avatar > img {
+  /**procura a imagem que está no primeiro nível*/
+  width: 10rem;
+  height: 11.5rem;
+  object-fit: cover;
+
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+} /**https://bennettfeely.com/clippy/*/
+
+a {
+  color: var(--grey);
+  text-decoration: none;
+  margin-top: 0.25rem;
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  align-items: center;
+}
+/**h1 é o seletor, entre chaves estão a declaração com propriedade e valor, finalizada com ;*/
+h1 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+p {
+  margin-top: 2rem;
+}
+
+ul {
+  margin-top: 4rem;
+  list-style: none;
+  padding: 0;
+  display: flex; /**deixa um elemento ao lado do outro no eixo horizontal
+  sem o display não dá para utilizar nem o gap e nem o justify-content
+    */
+  /**display: GRID - é possível trabalhar tanto com alinhamento vertical quanto horizontal*/
+  gap: 0.5rem; /**espaço entre os itens*/
+  justify-content: center; /**alinha o conteúdo no eixo horizontal x. Display: flex precisa estar ativado*/
+  /**text-align: center não funciona pois não é elemento texto/ propriedade texto*/
+}
