@@ -1,5 +1,5 @@
 const linksSocialMedia = {
-  github: 'paulakamijo2',
+  github: 'paulakamijo',
   youtube: '/c/PaulaKamijo/',
   facebook: 'paulankamijo',
   instagram: 'paulakamijo',
